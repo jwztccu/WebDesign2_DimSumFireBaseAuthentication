@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="custom.css">
+	<title>Dim Sum Cart!</title>
+</head>
+<body>
+
+<center>
+<font face=arial size=5 color="crimson">
+	<h1>Vote for Your Favorite Dim Sum Flavor 	<br> &#x1F35C;</br></h1>
+	<p size=3><a href="https://jwztccu.github.io/WebDesign2_MiniProject/uidoc.html">UI Document</a></p>
+</font>
+</center>
+
+	<dimsum-cart></dimsum-cart>
+
+	<script src="tags/dimsum-cart.tag" type="riot/tag"></script>
+	<script src="tags/dimsum-eggtart.tag" type="riot/tag"></script>
+	<script src="tags/dimsum-noodleroll.tag" type="riot/tag"></script>
+
+	<script src="https://cdn.jsdelivr.net/riot/3.1/riot+compiler.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+
+	<script>
+	   // Initialize Firebase
+		 var config = {
+	     apiKey: "AIzaSyBfooaQueCMoDUXsJ1Hmg_iedfgjGyzK68",
+	     authDomain: "mstuclass1.firebaseapp.com",
+	     databaseURL: "https://mstuclass1.firebaseio.com",
+	     projectId: "mstuclass1",
+	     storageBucket: "mstuclass1.appspot.com",
+	     messagingSenderId: "195648504363"
+	   };
+    firebase.initializeApp(config);
+    // Firebase Cached References
+    var database = firebase.database();
+		var user = firebase.auth();
+    var rootRef = database.ref('/');
+		//step1: Making the observable object accessible to all tags here.
+		var observable = riot.observable();
+
+		riot.mount('*');
+	</script>
+
+</body>
+</html>

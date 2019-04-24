@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font: 18px/1.5 'Avenir Next', 'Avenir', 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+p { margin: 1.5em 0; }
+
+/* Container method */
+section.container-method { 
+  background: #DA4453;
+  width: 100%;
+  padding: 50px;
+}
+
+section.container-method > .container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* calc() method */
+section.calc-method { 
+  background: #8CC152;
+  width: 700px;
+  margin: 0 auto;
+  box-sizing: content-box;
+  padding: 50px calc(50% - 350px);
+}
+
+@media (max-width: 800px) {
+  section.calc-method {
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+}
+
+/* Pseudo-Element Method */
+section.pseudo-element-method {
+  background: #3BAFDA;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+section.pseudo-element-method:before, 
+section.pseudo-element-method:after {
+  content: '';
+  display: block;
+  width: 200%;
+  height: 100%;
+  background: inherit;
+  position: absolute;
+  top: 0;
+}
+
+section:before { right: 100%; }
+section:after  { left: 100%;  }
+
+html, body { overflow-x: hidden; }
+
+/* calc() method */
+section.calc-method2 { 
+  background: #A669C9;
+  width: 700px;
+  margin: 0 auto;
+  box-sizing: content-box;
+  padding: 50px calc(50% - 350px);
+}
+
+@media (max-width: 800px) {
+  section.calc-method2 {
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+}
+
+/* calc() method */
+section.calc-method4 { 
+  background: #FeC277;
+  width: 700px;
+  margin: 0 auto;
+  box-sizing: content-box;
+  padding: 50px calc(50% - 350px);
+}
+
+@media (max-width: 800px) {
+  section.calc-method4 {
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+}
+
+/* calc() method */
+section.calc-method3 { 
+  background: #FFC300;
+  width: 700px;
+  margin: 0 auto;
+  box-sizing: content-box;
+  padding: 50px calc(50% - 350px);
+}
+
+@media (max-width: 800px) {
+  section.calc-method3 {
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+}
