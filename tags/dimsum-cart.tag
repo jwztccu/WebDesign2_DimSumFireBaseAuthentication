@@ -7,7 +7,7 @@
   <!--START OF AUTHENTICATION FROM ADMIN TAG -->
   <!--<admin> -->
   <div class="login" if={!currentUser}>
-    <p>Thanks for visiting. Please proceed to Google Authentication</p>
+    <p>Vote for your favorite Dim Sum flavors. Please proceed to Google Authentication to vote!</p>
     <button type="button" onclick={ logIn }>Login</button>
   </div>
 
